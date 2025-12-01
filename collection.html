@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Collection | Vivi's Record Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page page--collection">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="site-header__top">
+      <div class="site-branding">
+        <a href="index.html" class="site-logo">
+          <img src="images/logo-placeholder.png" alt="Vivi’s Record Room logo">
+        </a>
+        <div class="site-title-wrap">
+          <p class="site-tagline">dusty cds / haunted vinyl / liminal playlists</p>
+          <h1 class="site-title">Vivi's Record Room</h1>
+        </div>
+      </div>
+
+<!-- REAL SPOTIFY EMBED -->
+            <section class="now-playing" aria-label="Now playing">
+                <h2 class="now-playing__label">Now Playing</h2>
+                <div class="now-playing__player">
+                    <iframe
+                        src="https://open.spotify.com/embed/track/6vRX1MD1fLaGj6gX07jsyd?utm_source=generator&theme=0"
+                        width="100%" height="80" frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Spotify player – current record room playlist">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html" aria-current="page">My Collection</a></li>
+        <li><a href="wishlist.html">Wishlist / ISO</a></li>
+        <li><a href="seen.html">Seen Live</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main id="main-content" class="site-main">
+
+    <!-- ⭐ phpBB-style breadcrumb ⭐ -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Board index</a></li>
+        <li>My Collection</li>
+      </ol>
+    </nav>
+    <!-- end breadcrumb -->
+
+    <header class="page-header">
+      <h1>My Collection</h1>
+      <p>A living inventory of everything currently on my shelves.</p>
+    </header>
+
+    <section class="collection-controls" aria-label="Collection filters">
+      <!-- later you can hook JS to these -->
+      <form class="collection-filters">
+        <div class="collection-filters__group">
+          <label for="search">Search by artist, title, or note</label>
+          <input type="search" id="search" name="search">
+        </div>
+
+        <div class="collection-filters__group">
+          <label for="format">Format</label>
+          <select id="format" name="format">
+            <option value="">All</option>
+            <option value="cd">CD</option>
+            <option value="vinyl">Vinyl</option>
+            <option value="cassette">Cassette</option>
+          </select>
+        </div>
+
+        <div class="collection-filters__group">
+          <label for="sort">Sort by</label>
+          <select id="sort" name="sort">
+            <option value="artist">Artist (A–Z)</option>
+            <option value="year">Year</option>
+            <option value="added">Date added</option>
+          </select>
+        </div>
+      </form>
+    </section>
+
+    <section class="collection-grid" aria-labelledby="collection-heading">
+      <h2 id="collection-heading" class="visually-hidden">Collection items</h2>
+
+      <!-- This will be your main CSS Grid layout -->
+      <div class="collection-grid__layout">
+
+        <!-- Example item; card is a link to album page -->
+        <a class="record-card record-card--link" data-format="cd" href="albums/turn-on-the-bright-lights.html">
+          <figure class="record-card__art">
+            <img src="images/albums/totbl/totbl-cover.jpg"
+              alt="Album cover for Interpol – Turn on the Bright Lights">
+            <figcaption>CD · 2002</figcaption>
+          </figure>
+          <div class="record-card__info">
+            <h3 class="record-card__title">Turn on the Bright Lights</h3>
+            <p class="record-card__artist">Interpol</p>
+            <p class="record-card__meta">
+              Matador · 2002<br>
+              Tags: yearning, desperation dressed up as detachment
+            </p>
+          </div>
+        </a>
+
+        <a class="record-card record-card--link" data-format="cd" href="albums/either-or.html">
+          <figure class="record-card__art">
+            <img src="images/covers/either-or.jpg" alt="Album cover for Elliott Smith – Either/Or">
+            <figcaption>CD · 1997</figcaption>
+          </figure>
+          <div class="record-card__info">
+            <h3 class="record-card__title">Either/Or</h3>
+            <p class="record-card__artist">Elliott Smith</p>
+            <p class="record-card__meta">
+              Early US press · 1997<br>
+              Tags: beautifully unwell, cracked but warm
+            </p>
+          </div>
+        </a>
+
+        <!-- more items here; just copy-paste the <a> structure per record -->
+
+      </div>
+    </section>
+  </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer js-footer">
+        <p id="footer-text">
+            &copy; 2025 Vivi’s Record Room. All scratches intentional.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

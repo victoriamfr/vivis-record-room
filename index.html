@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Vivi's Record Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+
+<body class="page page--home">
+
+    <!-- HEADER (paste shared header here, mark Home as current) -->
+    <header class="site-header">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <div class="site-header__top">
+            <div class="site-branding">
+                <a href="index.html" class="site-logo">
+                    <img src="images/logo-placeholder.png" alt="Vivi’s Record Room logo">
+                </a>
+                <div class="site-title-wrap">
+                    <p class="site-tagline">dusty cds / haunted vinyl / liminal playlists</p>
+                    <h1 class="site-title">Vivi's Record Room</h1>
+                </div>
+            </div>
+
+            <!-- REAL SPOTIFY EMBED -->
+            <section class="now-playing" aria-label="Now playing">
+                <h2 class="now-playing__label">Now Playing</h2>
+                <div class="now-playing__player">
+                    <iframe
+                        src="https://open.spotify.com/embed/track/4zYBNOB5TOf1cMpFxA5e6N?utm_source=generator&theme=0"
+                        width="100%" height="80" frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Spotify player – current record room playlist">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul class="site-nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">My Collection</a></li>
+                <li><a href="wishlist.html">Wishlist / ISO</a></li>
+                <li><a href="seen.html">Seen Live</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="main-content" class="site-main">
+
+        <!-- ⭐ NEW: BREADCRUMB ⭐ -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li>Board index</li>
+            </ol>
+        </nav>
+        <!-- END breadcrumb -->
+
+        <section class="hero">
+            <div class="hero__content">
+                <h2>Welcome to the stacks</h2>
+                <p>
+                    This is my little online record bin – a messy, low-lit corner of the
+                    web where I archive my CDs, vinyl, and the things I’m still hunting for.
+                </p>
+            </div>
+        </section>
+
+        <section class="home-grid" aria-labelledby="home-grid-heading">
+            <h2 id="home-grid-heading" class="visually-hidden">Highlighted sections</h2>
+
+            <div class="home-grid__layout">
+                <article class="home-tile home-tile--collection">
+                    <h3><a href="collection.html">Browse the shelves</a></h3>
+                    <p>Every CD and vinyl I own, sorted by format, artist, and mood.</p>
+                </article>
+
+                <article class="home-tile home-tile--wishlist">
+                    <h3><a href="wishlist.html">Wishlist / ISO</a></h3>
+                    <p>Records I’m still chasing, white whales, and weird eBay dreams.</p>
+                </article>
+
+                <article class="home-tile home-tile--recent">
+                    <h3>Recent pickups</h3>
+                    <ul>
+                        <li>Smashing Pumpkins – Adore (CD)</li>
+                        <li>Radiohead – OK Computer (CD)</li>
+                        <li>Hymie’s Basement – s/t (CD)</li>
+                    </ul>
+                </article>
+
+                <article class="home-tile home-tile--staffpick">
+                    <h3>Staff Pick of the Week</h3>
+                    <p>
+                        Elliott Smith – <em>Either/Or</em><br>
+                        <span class="home-tile__note">file under: beautifully unwell.</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="home-news" aria-labelledby="home-news-heading">
+            <h2 id="home-news-heading">Bootleg Newsfeed</h2>
+            <ul class="home-news__list">
+                <li>
+                    <time datetime="2025-11-01">Nov 1, 2025</time> – Added a small pile of
+                    Ariel Pink and Wilco CDs to the database.
+                </li>
+                <li>
+                    <time datetime="2025-10-20">Oct 20, 2025</time> – Started cataloging vinyl;
+                    still figuring out the grading system.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer js-footer">
+        <p id="footer-text">
+            &copy; 2025 Vivi’s Record Room. All scratches intentional.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

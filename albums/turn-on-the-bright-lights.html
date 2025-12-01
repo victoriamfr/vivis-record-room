@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Turn on the Bright Lights | Vivi's Record Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="page page--album">
+
+  <!-- HEADER (same structure, but paths are ../ ) -->
+  <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="site-header__top">
+      <div class="site-branding">
+        <a href="../index.html" class="site-logo">
+          <img src="../images/logo-placeholder.png" alt="Vivi’s Record Room logo">
+        </a>
+        <div class="site-title-wrap">
+          <p class="site-tagline">dusty cds / haunted vinyl / liminal playlists</p>
+          <h1 class="site-title">Vivi's Record Room</h1>
+        </div>
+      </div>
+
+      <!-- you can change this track to something TOTBL-specific later -->
+      <section class="now-playing" aria-label="Now playing">
+        <h2 class="now-playing__label">Now Playing</h2>
+        <div class="now-playing__player">
+          <iframe
+            src="https://open.spotify.com/embed/track/6vRX1MD1fLaGj6gX07jsyd?utm_source=generator&theme=0"
+            width="100%" height="80" frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy" title="Spotify player – Turn on the Bright Lights">
+          </iframe>
+        </div>
+      </section>
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../collection.html">My Collection</a></li>
+        <li><a href="../wishlist.html">Wishlist / ISO</a></li>
+        <li><a href="../seen.html">Seen Live</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main">
+
+    <!-- breadcrumb: Board index > My Collection > Turn on the Bright Lights -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../index.html">Board index</a></li>
+        <li><a href="../collection.html">My Collection</a></li>
+        <li aria-current="page">Turn on the Bright Lights</li>
+      </ol>
+    </nav>
+
+    <!-- ALBUM HEADER -->
+    <header class="album-header">
+      <h1 id="album-title">Turn on the Bright Lights</h1>
+      <p class="album-header__artist">Interpol · Matador · 2002</p>
+      <p class="album-header__tagline">
+        file under: yearning, desperation dressed up as detachment.
+      </p>
+    </header>
+
+    <!-- MAIN ALBUM LAYOUT -->
+    <section class="album-layout" aria-labelledby="album-title">
+
+      <!-- LEFT COLUMN: cover + meta -->
+      <div class="album-layout__left">
+        <figure class="album-cover">
+          <!-- adjust filename to match your actual file name -->
+          <img src="../images/albums/totbl/totbl-cover.jpg"
+               alt="Album cover for Interpol – Turn on the Bright Lights">
+          <figcaption>CD · 2002 · Matador</figcaption>
+        </figure>
+
+        <section class="album-meta" aria-label="Pressing details">
+          <dl>
+            <div>
+              <dt>Format</dt>
+              <dd>CD</dd>
+            </div>
+            <div>
+              <dt>Pressing</dt>
+              <dd>US Matador · early 2000s</dd>
+            </div>
+            <div>
+              <dt>Condition</dt>
+              <dd>Jewel case a bit scuffed, disc clean</dd>
+            </div>
+            <div>
+              <dt>Purchased</dt>
+              <dd>Used bin, 2024</dd>
+            </div>
+            <div>
+              <dt>Filed under</dt>
+              <dd>yearning · desperation dressed up as detachment</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN: thoughts, tracklist, gallery, etc. -->
+      <div class="album-layout__right">
+
+        <section class="album-rating" aria-label="Personal rating">
+          <p class="album-rating__score">Rating: 5.0 / 5</p>
+          <p class="album-rating__note">
+            Core memory record. Feels like standing under a lone streetlight
+            at 2am while everything important quietly falls apart.
+          </p>
+        </section>
+
+        <section class="album-notes" aria-label="Notes & impressions">
+          <h2 class="visually-hidden">Album notes</h2>
+          <p>
+            This is basically the spine of my collection. Guitars like neon
+            cutting through fog, vocals that sound detached until you listen
+            too closely and realize they’re falling apart a little.
+          </p>
+          <p>
+            Favorite listens: late at night with headphones, or very early
+            bus rides when the city is still half asleep.
+          </p>
+        </section>
+
+        <section class="album-tracklist" aria-label="Tracklist">
+          <h2 class="visually-hidden">Tracklist</h2>
+          <ol>
+            <li>Untitled</li>
+            <li>Obstacle 1</li>
+            <li>NYC</li>
+            <li>PDA</li>
+            <li>Say Hello to the Angels</li>
+            <li>Hands Away</li>
+            <li>Obstacle 2</li>
+            <li>Stella Was a Diver and She Was Always Down</li>
+            <li>Roland</li>
+            <li>The New</li>
+            <li>Leif Erikson</li>
+          </ol>
+        </section>
+
+        <!-- optional: future gallery for disc photos etc. -->
+        <section class="album-gallery" aria-label="Album photos">
+          <h2 class="visually-hidden">Album gallery</h2>
+          <div class="album-gallery__grid">
+            <!-- later you can add spine/disc/inside photos here -->
+            <!--
+            <figure>
+              <img src="../images/albums/totbl/disc.jpg" alt="Disc of Turn on the Bright Lights">
+              <figcaption>Disc</figcaption>
+            </figure>
+            -->
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer js-footer">
+    <p id="footer-text">
+      &copy; 2025 Vivi’s Record Room. All scratches intentional.
+    </p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

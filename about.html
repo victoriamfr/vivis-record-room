@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About | Vivi's Record Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page page--about">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <div class="site-header__top">
+            <div class="site-branding">
+                <a href="index.html" class="site-logo">
+                    <img src="images/logo-placeholder.png" alt="Vivi’s Record Room logo">
+                </a>
+                <div class="site-title-wrap">
+                    <p class="site-tagline">dusty cds / haunted vinyl / liminal playlists</p>
+                    <h1 class="site-title">Vivi's Record Room</h1>
+                </div>
+            </div>
+
+            <section class="now-playing" aria-label="Now playing">
+                <h2 class="now-playing__label">Now Playing</h2>
+                <div class="now-playing__player">
+                    <iframe
+                        src="https://open.spotify.com/embed/track/5XhMgAWzou6EjDmQtoyoZE?utm_source=generator&theme=0"
+                        width="100%" height="80" frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Spotify player – current record room playlist">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul class="site-nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">My Collection</a></li>
+                <li><a href="wishlist.html">Wishlist / ISO</a></li>
+                <li><a href="seen.html">Seen Live</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+
+        <!-- ⭐ phpBB-style breadcrumb ⭐ -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Board index</a></li>
+                <li aria-current="page">About</li>
+            </ol>
+        </nav>
+        <!-- end breadcrumb -->
+
+        <header class="page-header">
+            <h1>About</h1>
+            <p>
+                Who’s behind this little record bin, what this site is, and why I’m
+                wasting perfectly good brain cells cataloging plastic circles.
+            </p>
+        </header>
+
+        <!-- can be a 2-column CSS Grid on tablet/desktop -->
+        <section class="about-grid" aria-labelledby="about-heading">
+            <h2 id="about-heading" class="visually-hidden">About content</h2>
+
+            <div class="about-grid__layout">
+
+                <article class="about-panel about-panel--bio">
+                    <h3>About me</h3>
+                    <p>
+                        I’m Vivi, a chronically online person with too many feelings about
+                        early-2000s rock, lo-fi confessions, and albums that sound like
+                        insomnia. This site is basically my digital record bin – a place to
+                        keep track of what I own, what I want, and how each piece makes my
+                        brain feel slightly less broken.
+                    </p>
+                </article>
+
+                <article class="about-panel about-panel--social about-social" aria-labelledby="about-social-heading">
+                    <h3 id="about-social-heading">Find me elsewhere</h3>
+                    <p>
+                        If you want more unhinged music takes, half-finished reviews, and
+                        photos of whatever’s currently spinning:
+                    </p>
+
+                    <ul class="about-social__list">
+                        <li>
+                            <a href="https://rateyourmusic.com/USERNAME" target="_blank" rel="noopener">
+                                RateYourMusic – ongoing breakdowns &amp; reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/broadcasttttt" target="_blank" rel="noopener">
+                                Instagram – dusty shelf photos &amp; gig stories
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/msmisery66" target="_blank" rel="noopener">
+                                Twitter – live reactions and bad jokes
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="about-panel about-panel--project">
+                    <h3>About the project</h3>
+                    <p>
+                        This archive was built as a pure HTML/CSS/JavaScript project, inspired
+                        by old Geocities fan pages, early tech blogs, and the feeling of
+                        wandering into a dim, half-organized record store.
+                    </p>
+                    <p>
+                        It uses responsive layouts (phone, tablet, desktop), CSS Grid for the
+                        shelves, and a few tiny interactive scripts to filter, sort, and
+                        browse different formats.
+                    </p>
+                </article>
+
+                <article class="about-panel about-panel--tech">
+                    <h3>Tech &amp; design notes</h3>
+                    <ul>
+                        <li>Built with semantic HTML and accessible navigation.</li>
+                        <li>CSS Grid powers the album shelves and homepage tiles.</li>
+                        <li>Three breakpoints: phone, tablet, and desktop.</li>
+                        <li>No frameworks, no libraries – just hand-rolled front-end.</li>
+                    </ul>
+                </article>
+
+                <article class="about-panel about-panel--credits">
+                    <h3>Thanks &amp; credits</h3>
+                    <p>
+                        Fonts, textures, and other assets will be credited here properly
+                        once the design is finished. Consider this the liner notes section.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer js-footer">
+        <p id="footer-text">
+            &copy; 2025 Vivi’s Record Room. All scratches intentional.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

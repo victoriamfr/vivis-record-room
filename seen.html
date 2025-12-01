@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Seen Live | Vivi's Record Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page page--seen-live">
+
+  <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="site-header__top">
+      <div class="site-branding">
+        <a href="index.html" class="site-logo">
+          <img src="images/logo-placeholder.png" alt="Vivi’s Record Room logo">
+        </a>
+        <div class="site-title-wrap">
+          <p class="site-tagline">live noise / ringing ears / blurry photos</p>
+          <h1 class="site-title">Vivi's Record Room</h1>
+        </div>
+      </div>
+
+<!-- REAL SPOTIFY EMBED -->
+            <section class="now-playing" aria-label="Now playing">
+                <h2 class="now-playing__label">Now Playing</h2>
+                <div class="now-playing__player">
+                    <iframe
+                        src="https://open.spotify.com/embed/track/1aabzvk84aJiB22wqXHKMG?utm_source=generator&theme=0"
+                        width="100%" height="80" frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Spotify player – current record room playlist">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">My Collection</a></li>
+        <li><a href="wishlist.html">Wishlist / ISO</a></li>
+        <li><a href="seen.html" aria-current="page">Seen Live</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main">
+
+    <!-- ⭐ updated forum-style breadcrumb ⭐ -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Board index</a></li>
+        <li aria-current="page">Seen Live / Gig Log</li>
+      </ol>
+    </nav>
+
+    <header class="page-header">
+      <h1>Seen Live</h1>
+      <p>
+        Gig log, tour diary, whatever you want to call it.
+        Every show that rattled my ears enough to earn a line on this page.
+      </p>
+    </header>
+
+    <!-- This is a good place for CSS Grid: left column = meta, right = “posts” -->
+    <section class="forum-board" aria-labelledby="forum-heading">
+      <h2 id="forum-heading" class="visually-hidden">Show threads</h2>
+
+      <div class="forum-board__header">
+        <p class="forum-board__title">Threads</p>
+        <p class="forum-board__meta">Date · City · Venue · Notes</p>
+      </div>
+
+      <div class="forum-thread-list">
+        <!-- each article = one "thread" / show -->
+        <article class="forum-thread">
+          <header class="forum-thread__header">
+            <h3 class="forum-thread__title">
+              <a href="#interpol-2025">
+                [GIG LOG] Interpol — Turn On the Bright Lights in full
+              </a>
+            </h3>
+            <p class="forum-thread__meta">
+              <span class="forum-thread__date">
+                <time datetime="2025-10-14">Oct 14, 2025</time>
+              </span>
+              · <span class="forum-thread__city">Ann Arbor, MI</span>
+              · <span class="forum-thread__venue">Small club w/ too many strobe lights</span>
+            </p>
+          </header>
+
+          <div class="forum-thread__body" id="interpol-2025">
+            <p class="forum-thread__userline">
+              Posted by <span class="forum-thread__user">vivi</span> · status: not okay but vibing
+            </p>
+            <p>
+              Setlist felt like my high school brain opened up and walked onstage.
+              Sound was a little muddy but the guitars still cut through like neon
+              in fog. Crowd was weirdly polite. 10/10 would lose my voice again.
+            </p>
+          </div>
+        </article>
+
+        <article class="forum-thread">
+          <header class="forum-thread__header">
+            <h3 class="forum-thread__title">
+              <a href="#elliott-tribute">
+                [SHOW REPORT] Elliott Smith tribute night
+              </a>
+            </h3>
+            <p class="forum-thread__meta">
+              <span class="forum-thread__date">
+                <time datetime="2025-09-02">Sep 2, 2025</time>
+              </span>
+              · <span class="forum-thread__city">Detroit, MI</span>
+              · <span class="forum-thread__venue">Tiny bar w/ christmas lights</span>
+            </p>
+          </header>
+
+          <div class="forum-thread__body" id="elliott-tribute">
+            <p class="forum-thread__userline">
+              Posted by <span class="forum-thread__user">vivi</span> · mood: beautifully unwell
+            </p>
+            <p>
+              Local bands covering Elliott with varying levels of emotional damage.
+              Some songs were rough, some were perfect by accident. Everyone sang
+              along to “Between the Bars” and it felt like a group therapy session
+              that no one paid for.
+            </p>
+          </div>
+        </article>
+
+        <article class="forum-thread">
+          <header class="forum-thread__header">
+            <h3 class="forum-thread__title">
+              <a href="#wilco-2024">
+                [LIVE] Wilco — everything hurts but it’s fine
+              </a>
+            </h3>
+            <p class="forum-thread__meta">
+              <span class="forum-thread__date">
+                <time datetime="2024-11-05">Nov 5, 2024</time>
+              </span>
+              · <span class="forum-thread__city">Chicago, IL</span>
+              · <span class="forum-thread__venue">Theater w/ broken seats</span>
+            </p>
+          </header>
+
+          <div class="forum-thread__body" id="wilco-2024">
+            <p class="forum-thread__userline">
+              Posted by <span class="forum-thread__user">vivi</span> · tag: heartache with static
+            </p>
+            <p>
+              “Jesus, Etc.” live is basically emotional vandalism. Band sounded
+              too tight for how destroyed everyone in the crowd looked. Left with
+              a blurry phone video and the urge to reorganize my entire life.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="forum-legend">
+      <h2>Legend / future plans</h2>
+      <ul>
+        <li><strong>[GIG LOG]</strong> full writeups with feelings and minor chaos.</li>
+        <li><strong>[LIVE]</strong> shorter notes, more setlist / stats.</li>
+        <li><strong>[SHOW REPORT]</strong> messy in-between, like this entire page.</li>
+      </ul>
+      <p>
+        Later I’ll wire this up so you can filter shows by city, year, or “emotional damage
+        level” using a few small JavaScript helpers.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer js-footer">
+    <p id="footer-text">
+      &copy; 2025 Vivi’s Record Room. All scratches intentional.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

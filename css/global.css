@@ -1,0 +1,145 @@
+/* ===========================
+   GLOBAL RESET & VARIABLES
+   =========================== */
+
+:root {
+  /* MAIN PALETTE – CRIMSON */
+  --bg-main: #050505;        /* deep black */
+  --bg-panel: #0a0a0a;       /* slightly raised black */
+  --bg-panel-alt: #111111;   /* subtle variation */
+
+  --accent: #d20f2a;         /* CRIMSON RED — main accent (#D20F2A) */
+  --accent-soft: #ff3b52;    /* lighter neon-ish red for labels */
+
+  --text-main: #f5f5f5;      /* soft white */
+  --text-muted: #b8b8b8;     /* grey */
+
+  --border-soft: #1a1a1a;    /* thin black borders */
+  --border-strong: #2a2a2a;  /* stronger separator */
+
+  --link: #f03d4c;           /* reddish link like old forums */
+  --link-hover: #ffffff;
+
+  --danger: #ff4e4e;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-soft: 0 0 30px rgba(210, 15, 42, 0.15); /* crimson glow */
+}
+
+/* Reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   BODY + GLOBAL GRAIN
+   =========================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+
+  /* custom cursor — update file name when you have it */
+  cursor: url("../images/cursors/your-cursor.cur"), auto;
+}
+
+/* subtle global noise / grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18; /* tweak: 0.1–0.25 */
+  mix-blend-mode: soft-light;
+  z-index: 0;
+
+  background-image:
+    /* tiny speckles */
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.12) 0, transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.06) 0, transparent 60%),
+    radial-gradient(circle at 0% 50%, rgba(255, 255, 255, 0.08) 0, transparent 55%),
+
+    /* horizontal noise lines */
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+
+    /* vertical noise lines */
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+/* ===========================
+   BASE ELEMENTS
+   =========================== */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* spacing defaults for all layout blocks */
+main,
+section,
+header,
+footer {
+  padding-inline: 1rem;
+}
+
+/* ===========================
+   SKIP LINK
+   =========================== */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background-color: var(--accent);
+  color: #000;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
