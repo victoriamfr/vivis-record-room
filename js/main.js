@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = el.querySelector("img");
       if (img) {
         img.addEventListener("error", () => {
-          img.src = "images/albums/placeholder-cover.png"; // create this if you want a nice default
+          img.src = "images/placeholder-cover.png";
         });
       }
 
