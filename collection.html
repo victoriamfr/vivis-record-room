@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/records-data.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body class="page page--collection">
@@ -53,14 +55,12 @@
 
   <main id="main-content" class="site-main">
 
-    <!-- ⭐ phpBB-style breadcrumb ⭐ -->
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
         <li><a href="index.html">Board index</a></li>
         <li>My Collection</li>
       </ol>
     </nav>
-    <!-- end breadcrumb -->
 
     <header class="page-header">
       <h1>My Collection</h1>
@@ -90,6 +90,7 @@
           <select id="sort" name="sort">
             <option value="artist">Artist (A–Z)</option>
             <option value="year">Year</option>
+            <option value="label">Label (A–Z)</option>
             <option value="added">Date added</option>
           </select>
         </div>
@@ -98,13 +99,7 @@
 
     <section class="collection-grid" aria-labelledby="collection-heading">
       <h2 id="collection-heading" class="visually-hidden">Collection items</h2>
-
-      <!-- This will be your main CSS Grid layout -->
-      <div class="collection-grid__layout">
-
-        <div class="collection-grid__layout js-collection-grid">
-        </div>
-
+      <div class="collection-grid__layout js-collection-grid"></div>
 
       </div>
     </section>

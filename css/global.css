@@ -1,5 +1,5 @@
 /* ===========================
-   GLOBAL RESET & VARIABLES
+   GLOBAL VARIABLES
    =========================== */
 
 :root {
@@ -29,7 +29,10 @@
   --shadow-soft: 0 0 30px rgba(210, 15, 42, 0.15); /* crimson glow */
 }
 
-/* Reset-ish */
+/* ===========================
+   RESET-ISH / BASE
+   =========================== */
+
 *,
 *::before,
 *::after {
@@ -40,10 +43,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===========================
-   BODY + GLOBAL GRAIN
-   =========================== */
-
 body {
   margin: 0;
   padding: 0;
@@ -52,6 +51,7 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
+  min-height: 100vh;
 
   /* custom cursor — update file name when you have it */
   cursor: url("../images/cursors/your-cursor.cur"), auto;
@@ -92,12 +92,32 @@ body::before {
     );
 }
 
+/* Reduced motion: no smooth scroll, tone down noise */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  body::before {
+    opacity: 0.08;
+  }
+}
+
 /* ===========================
    BASE ELEMENTS
    =========================== */
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -106,17 +126,23 @@ a {
   text-decoration: none;
 }
 
+/* keep hover + keyboard focus consistent and visible */
 a:hover,
 a:focus-visible {
   color: var(--link-hover);
   text-decoration: underline;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
 p {
   margin-top: 0;
 }
 
-/* spacing defaults for all layout blocks */
+/* spacing defaults for main layout regions */
 main,
 section,
 header,
@@ -139,7 +165,10 @@ footer {
   z-index: 1000;
 }
 
-.skip-link:focus {
+/* use focus-visible so it only appears for keyboard users */
+.skip-link:focus-visible {
   left: 0.5rem;
   top: 0.5rem;
+  outline: 2px solid #000;
+  outline-offset: 2px;
 }
