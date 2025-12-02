@@ -453,7 +453,7 @@ button:focus-visible {
     border: 1px solid var(--border-soft);
 }
 
-/* hide caption on cards – we don't need CD · 2002 here */
+/* hide caption on cards*/
 .record-card__art figcaption {
     display: none;
 }
@@ -575,15 +575,18 @@ button:focus-visible {
 
     .record-card__art {
         justify-content: flex-start;
-        width: 90px;
+        width: 90px;          /* column for the art */
+        flex: 0 0 90px;
     }
 
     .record-card__art img {
-        width: 90px;
-        height: 90px;
-        aspect-ratio: auto;
+        width: 100%;          /* fills that 90px column */
+        max-width: none;
+        aspect-ratio: 1 / 1;  /* keep the square */
+        object-fit: cover;    /* still crop nicely */
     }
 }
+
 
 /* ===========================
    WISHLIST PAGE
