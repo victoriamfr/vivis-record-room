@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <title>404 – Lost in the stacks | Vivi's Record Room</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- root-relative paths so they work from /albums/... too -->
   <link rel="stylesheet" href="/vivis-record-room/css/global.css" />
   <link rel="stylesheet" href="/vivis-record-room/css/styles.css" />
 </head>
@@ -16,8 +18,9 @@
   <header class="site-header">
     <div class="site-header__top">
       <div class="site-branding">
-        <a href="index.html" class="site-logo" aria-label="Go to home">
-          <img src="images/logo-placeholder.png" alt="Vivi’s Record Room logo" />
+        <!-- go to project root home, not albums/index.html -->
+        <a href="/vivis-record-room/index.html" class="site-logo" aria-label="Go to home">
+          <img src="/vivis-record-room/images/logo-placeholder.png" alt="Vivi’s Record Room logo" />
         </a>
         <div class="site-title-wrap">
           <p class="site-tagline">error bin / misplaced records section</p>
@@ -30,7 +33,7 @@
   <main id="main-content" class="site-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
-        <li><a href="index.html">Board index</a></li>
+        <li><a href="/vivis-record-room/index.html">Board index</a></li>
         <li aria-current="page">404 – Lost in the stacks</li>
       </ol>
     </nav>
@@ -43,7 +46,7 @@
       </p>
 
       <p>
-        <a href="index.html" class="error__link">Return to the main bin</a>
+        <a href="/vivis-record-room/index.html" class="error__link">Return to the main bin</a>
       </p>
     </section>
   </main>
@@ -52,12 +55,7 @@
     <p>© Vivi’s Record Room. All scratches intentional.</p>
   </footer>
 
-</body>
-
-</html>
-
-
-<script src="js/main.js"></script>
+  <script src="/vivis-record-room/js/main.js"></script>
 </body>
 
 </html>
