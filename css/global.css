@@ -150,6 +150,11 @@ footer {
   padding-inline: 1rem;
 }
 
+/* GLOBAL CUSTOM CURSOR */
+* {
+    cursor: url("../images/Red\ Vinyl.cur") 0 0, auto !important;
+}
+
 /* ===========================
    SKIP LINK
    =========================== */
