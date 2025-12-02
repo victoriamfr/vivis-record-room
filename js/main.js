@@ -244,14 +244,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (sort === "artist") {
         list.sort((a, b) => a.artist.localeCompare(b.artist));
+      } else if (sort === "title") {
+          list.sort((a, b) => a.title.localeCompare(b.title));
       } else if (sort === "year") {
         list.sort((a, b) => (a.year || 0) - (b.year || 0));
       } else if (sort === "label") {
         list.sort((a, b) => (a.label || "").localeCompare(b.label || ""));
       } else if (sort === "added") {
         list.sort((a, b) => a.addedIndex - b.addedIndex);
-      } else if (sort === "title") {
-        list.sort((a, b) => a.title.localeCompare(b.title));
       }
 
 
