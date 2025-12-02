@@ -1,15 +1,17 @@
 // js/main.js
 
 document.addEventListener("DOMContentLoaded", () => {
+  /* ========================================================================
+     FOOTER: page detection + dynamic messages
+     ======================================================================== */
+
   const footer = document.querySelector(".js-footer");
   const footerText = footer?.querySelector("#footer-text");
 
   if (!footer || !footerText) return;
 
-  // Always use the subtle theme-1 (no wild color switching)
   footer.classList.add("site-footer--theme-1");
 
-  // determine page type from body classes
   const body = document.body;
   let pageKey = "default";
 
@@ -21,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   else if (body.classList.contains("page--404")) pageKey = "error";
   else if (body.classList.contains("page--album")) pageKey = "album";
 
-  // normal footer messages per page type
   const footerMessages = {
     home: [
       "--- scratched but still playable --- now loading another obsession.",
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "--- inventory not guaranteed accurate --- I definitely forgot a few CDs.",
       "--- filed by vibe, not logic --- browse at your own risk.",
       "--- shelf status: overflowing --- send help or new jewel cases.",
-      "--- warning: may cause sudden discogs searches ---"
+      "--- warning: may cause sudden Discogs searches ---"
     ],
     wishlist: [
       "--- manifesting rare pressings --- delusion is a collecting strategy.",
@@ -75,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const messages = footerMessages[pageKey] || footerMessages.default;
 
-  const hiJackie = "--- hi jackie! you scrolled all the way down again, didn’t you? ---";
+  const hiJackie =
+    "--- hi jackie! you scrolled all the way down again, didn’t you? ---";
 
   const globalEggs = [
     "--- rare pressing unlocked: you found the secret footer ---",
@@ -84,44 +86,137 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const base = "© 2025 Vivi’s Record Room. ";
-
-  // roll the dice for easter eggs
   const roll = Math.random();
+
   let chosenMessage;
 
   if (roll < 0.02) {
-    // ~2% chance: global easter egg
-    chosenMessage =
-      globalEggs[Math.floor(Math.random() * globalEggs.length)];
+    chosenMessage = globalEggs[Math.floor(Math.random() * globalEggs.length)];
   } else if (roll < 0.06) {
-    // next ~4%: hi jackie!
     chosenMessage = hiJackie;
   } else {
-    // otherwise: normal page-specific message
-    chosenMessage =
-      messages[Math.floor(Math.random() * messages.length)];
+    chosenMessage = messages[Math.floor(Math.random() * messages.length)];
   }
 
   footerText.textContent = base + chosenMessage;
-});
 
+  /* ========================================================================
+     COLLECTION PAGE: dynamic list, filtering, sorting
+     ======================================================================== */
 
-  // ----- Album lightbox / darkroom view -----
+  if (pageKey === "collection") {
+    const grid = document.querySelector(".js-collection-grid");
+    const searchInput = document.querySelector("#search");
+    const formatSelect = document.querySelector("#format");
+    const sortSelect = document.querySelector("#sort");
+
+    if (grid) {
+      // ---- Your CD data lives here ---- //
+      const records = [
+        {
+          id: "totbl",
+          title: "Turn on the Bright Lights",
+          artist: "Interpol",
+          format: "cd",
+          year: 2002,
+          label: "Matador",
+          tags: ["yearning", "desperation dressed up as detachment"],
+          href: "albums/turn-on-the-bright-lights.html",
+          cover: "images/albums/totbl/totbl-cover.jpg",
+          notes: "Core memory record."
+        }
+        // Add more objects here as you build your collection
+      ];
+
+      // Track order of addition
+      records.forEach((r, i) => (r.addedIndex = i));
+
+      function createRecordCard(r) {
+        const el = document.createElement("a");
+        el.className = "record-card record-card--link";
+        el.href = r.href;
+        el.dataset.format = r.format;
+
+        el.innerHTML = `
+          <figure class="record-card__art">
+            <img src="${r.cover}" alt="Album cover for ${r.artist} – ${r.title}">
+          </figure>
+          <div class="record-card__info">
+            <h3 class="record-card__title">${r.title}</h3>
+            <p class="record-card__artist">${r.artist}</p>
+            <p class="record-card__meta">
+              ${r.label} · ${r.year}<br>
+              Tags: ${r.tags.join(", ")}
+            </p>
+          </div>
+        `;
+
+        return el;
+      }
+
+      function filterAndSort() {
+        const q = (searchInput?.value || "").trim().toLowerCase();
+        const fmt = formatSelect?.value || "";
+        const sort = sortSelect?.value || "artist";
+
+        let out = records.filter((r) => {
+          if (fmt && r.format !== fmt) return false;
+
+          if (q) {
+            const hay = [
+              r.title,
+              r.artist,
+              r.label,
+              r.tags.join(" "),
+              r.notes
+            ]
+              .join(" ")
+              .toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+
+          return true;
+        });
+
+        if (sort === "artist") out.sort((a, b) => a.artist.localeCompare(b.artist));
+        else if (sort === "year") out.sort((a, b) => a.year - b.year);
+        else if (sort === "added") out.sort((a, b) => a.addedIndex - b.addedIndex);
+
+        return out;
+      }
+
+      function render(list) {
+        grid.innerHTML = "";
+        list.forEach((r) => grid.appendChild(createRecordCard(r)));
+      }
+
+      const update = () => render(filterAndSort());
+
+      searchInput?.addEventListener("input", update);
+      formatSelect?.addEventListener("change", update);
+      sortSelect?.addEventListener("change", update);
+
+      render(records);
+    }
+  }
+
+  /* ========================================================================
+     ALBUM PAGE: lightbox / darkroom
+     ======================================================================== */
+
   const galleryRoot = document.querySelector(".album-gallery");
   const thumbs = galleryRoot
     ? galleryRoot.querySelectorAll(".js-album-thumb")
     : [];
 
   if (thumbs.length) {
-    // create lightbox once
     const lightbox = document.createElement("div");
     lightbox.className = "album-lightbox";
     lightbox.innerHTML = `
       <div class="album-lightbox__inner" role="dialog" aria-modal="true" aria-label="Album photo">
         <div class="album-lightbox__image-wrap">
           <button type="button" class="album-lightbox__close">
-            <span class="visually-hidden">Close</span>
-            ×
+            <span class="visually-hidden">Close</span>×
           </button>
           <img class="album-lightbox__image" src="" alt="">
         </div>
@@ -133,20 +228,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const imgEl = lightbox.querySelector(".album-lightbox__image");
     const captionEl = lightbox.querySelector(".album-lightbox__caption");
     const closeBtn = lightbox.querySelector(".album-lightbox__close");
-
     const thumbArray = Array.from(thumbs);
+
     let activeIndex = 0;
 
-    function openAt(index) {
-      const thumb = thumbArray[index];
-      if (!thumb) return;
+    function openAt(i) {
+      const t = thumbArray[i];
+      if (!t) return;
 
-      activeIndex = index;
+      activeIndex = i;
 
       const fullSrc =
-        thumb.getAttribute("data-album-full") || thumb.getAttribute("src");
-      const alt = thumb.getAttribute("alt") || "";
-      const fig = thumb.closest("figure");
+        t.getAttribute("data-album-full") || t.getAttribute("src");
+      const alt = t.getAttribute("alt") || "";
+      const fig = t.closest("figure");
       const cap =
         fig && fig.querySelector("figcaption")
           ? fig.querySelector("figcaption").textContent
@@ -166,42 +261,33 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("album-lightbox-open");
     }
 
-    // click + keyboard on thumbs
-    thumbArray.forEach((thumb, index) => {
-      thumb.setAttribute("tabindex", "0");
-
-      thumb.addEventListener("click", (event) => {
-        event.preventDefault();
-        openAt(index);
+    thumbArray.forEach((t, i) => {
+      t.tabIndex = 0;
+      t.addEventListener("click", (e) => {
+        e.preventDefault();
+        openAt(i);
       });
-
-      thumb.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openAt(index);
+      t.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openAt(i);
         }
       });
     });
 
-    // close interactions
     closeBtn.addEventListener("click", closeLightbox);
-
-    lightbox.addEventListener("click", (event) => {
-      if (event.target === lightbox) {
-        // clicking the dark backdrop
-        closeLightbox();
-      }
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
     });
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", (e) => {
       if (!lightbox.classList.contains("is-active")) return;
 
-      if (event.key === "Escape") {
-        closeLightbox();
-      } else if (event.key === "ArrowRight") {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowRight")
         openAt((activeIndex + 1) % thumbArray.length);
-      } else if (event.key === "ArrowLeft") {
+      else if (e.key === "ArrowLeft")
         openAt((activeIndex - 1 + thumbArray.length) % thumbArray.length);
-      }
     });
   }
+});

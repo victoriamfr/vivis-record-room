@@ -26,19 +26,18 @@
         </div>
       </div>
 
-<!-- REAL SPOTIFY EMBED -->
-            <section class="now-playing" aria-label="Now playing">
-                <h2 class="now-playing__label">Now Playing</h2>
-                <div class="now-playing__player">
-                    <iframe
-                        src="https://open.spotify.com/embed/track/6vRX1MD1fLaGj6gX07jsyd?utm_source=generator&theme=0"
-                        width="100%" height="80" frameborder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy" title="Spotify player – current record room playlist">
-                    </iframe>
-                </div>
-            </section>
+      <!-- REAL SPOTIFY EMBED -->
+      <section class="now-playing" aria-label="Now playing">
+        <h2 class="now-playing__label">Now Playing</h2>
+        <div class="now-playing__player">
+          <iframe src="https://open.spotify.com/embed/track/6vRX1MD1fLaGj6gX07jsyd?utm_source=generator&theme=0"
+            width="100%" height="80" frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+            title="Spotify player – current record room playlist">
+          </iframe>
         </div>
+      </section>
+    </div>
 
     <nav class="site-nav" aria-label="Main navigation">
       <ul class="site-nav__list">
@@ -103,51 +102,22 @@
       <!-- This will be your main CSS Grid layout -->
       <div class="collection-grid__layout">
 
-        <!-- Example item; card is a link to album page -->
-        <a class="record-card record-card--link" data-format="cd" href="albums/turn-on-the-bright-lights.html">
-          <figure class="record-card__art">
-            <img src="images/albums/totbl/totbl-cover.jpg"
-              alt="Album cover for Interpol – Turn on the Bright Lights">
-            <figcaption>CD · 2002</figcaption>
-          </figure>
-          <div class="record-card__info">
-            <h3 class="record-card__title">Turn on the Bright Lights</h3>
-            <p class="record-card__artist">Interpol</p>
-            <p class="record-card__meta">
-              Matador · 2002<br>
-              Tags: yearning, desperation dressed up as detachment
-            </p>
-          </div>
-        </a>
+        <div class="collection-grid__layout js-collection-grid">
+        </div>
 
-        <a class="record-card record-card--link" data-format="cd" href="albums/either-or.html">
-          <figure class="record-card__art">
-            <img src="images/covers/either-or.jpg" alt="Album cover for Elliott Smith – Either/Or">
-            <figcaption>CD · 1997</figcaption>
-          </figure>
-          <div class="record-card__info">
-            <h3 class="record-card__title">Either/Or</h3>
-            <p class="record-card__artist">Elliott Smith</p>
-            <p class="record-card__meta">
-              Early US press · 1997<br>
-              Tags: beautifully unwell, cracked but warm
-            </p>
-          </div>
-        </a>
-
-        <!-- more items here; just copy-paste the <a> structure per record -->
 
       </div>
     </section>
   </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer js-footer">
-        <p id="footer-text">
-            &copy; 2025 Vivi’s Record Room. All scratches intentional.
-        </p>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="site-footer js-footer">
+    <p id="footer-text">
+      &copy; 2025 Vivi’s Record Room. All scratches intentional.
+    </p>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
