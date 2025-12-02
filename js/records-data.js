@@ -25,8 +25,8 @@ window.VIVI_RECORDS = [
     year: 2014,
     label: "4AD",
     tags: ["weird pop", "colorful", "art-damaged"],
-    href: "albums/pom-pom.html",
-    cover: "images/albums/ariel-pink/pom-pom/pom-pom-cover.jpg",
+    href: "albums/ariel-pink/pom-pom.html",
+    cover: "images/ariel-pink/pom-pom/pom-pom-cover.jpg",
     notes: ""
   },
   {
@@ -37,8 +37,8 @@ window.VIVI_RECORDS = [
     year: 2007,
     label: "Human Ear",
     tags: ["lo-fi", "cult classic"],
-    href: "albums/scared-famous-ff.html",
-    cover: "images/albums/ariel-pink/scared-famous-ff/scared-famous-ff-cover.jpg",
+    href: "albums/ariel-pink/scared-famous-ff.html",
+    cover: "images/ariel-pink/scared-famous-ff/scared-famous-ff-cover.jpg",
     notes: ""
   },
   {
@@ -49,8 +49,8 @@ window.VIVI_RECORDS = [
     year: 2006,
     label: "Human Ear",
     tags: ["weird pop", "bedroom psych"],
-    href: "albums/house-arrest.html",
-    cover: "images/albums/ariel-pink/house-arrest/house-arrest-cover.jpg",
+    href: "albums/ariel-pink/house-arrest.html",
+    cover: "images/ariel-pink/house-arrest/house-arrest-cover.jpg",
     notes: ""
   },
   {
@@ -61,8 +61,8 @@ window.VIVI_RECORDS = [
     year: 2017,
     label: "Mexican Summer",
     tags: ["dream pop", "nostalgic", "haunted"],
-    href: "albums/dtbj.html",
-    cover: "images/albums/ariel-pink/dtbj/dtbj-cover.png",
+    href: "albums/ariel-pink/dtbj.html",
+    cover: "images/ariel-pink/dtbj/dtbj-cover.png",
     notes: ""
   },
   {
@@ -70,11 +70,11 @@ window.VIVI_RECORDS = [
     title: "With You Every Night",
     artist: "Ariel Pink",
     format: "cd",
-    year: 2024,
+    year: 2025,
     label: "Independent",
     tags: ["lo-fi pop", "outsider"],
-    href: "albums/with-you-every-night.html",
-    cover: "images/albums/ariel-pink/wyen/wyen-cover.jpg",
+    href: "albums/ariel-pink/with-you-every-night.html",
+    cover: "images/ariel-pink/wyen/wyen-cover.jpg",
     notes: ""
   },
   {
@@ -85,8 +85,8 @@ window.VIVI_RECORDS = [
     year: 2010,
     label: "4AD",
     tags: ["hypnagogic pop"],
-    href: "albums/before-today.html",
-    cover: "images/albums/ariel-pink/before-today/before-today-cover.jpg",
+    href: "albums/ariel-pink/before-today.html",
+    cover: "images/ariel-pink/before-today/before-today-cover.jpg",
     notes: ""
   },
   {
@@ -97,8 +97,8 @@ window.VIVI_RECORDS = [
     year: 2005,
     label: "Paw Tracks",
     tags: ["lo-fi", "outsider pop"],
-    href: "albums/worn-copy.html",
-    cover: "images/albums/ariel-pink/worn-copy/worn-copy-cover.jpg",
+    href: "albums/ariel-pink/worn-copy.html",
+    cover: "images/ariel-pink/worn-copy/worn-copy-cover.jpg",
     notes: ""
   },
   {
@@ -109,8 +109,8 @@ window.VIVI_RECORDS = [
     year: 2012,
     label: "4AD",
     tags: ["weird pop", "psychedelic pop"],
-    href: "albums/mature-themes.html",
-    cover: "images/albums/ariel-pink/mature-themes/mature-themes-cover.jpg",
+    href: "albums/ariel-pink/mature-themes.html",
+    cover: "images/ariel-pink/mature-themes/mature-themes-cover.jpg",
     notes: ""
   },
 
@@ -126,7 +126,7 @@ window.VIVI_RECORDS = [
     label: "Upset the Rhythm",
     tags: ["minimal synth", "haunted"],
     href: "albums/later-than-you-think.html",
-    cover: "images/albums/john-maus/ltyt/ltyt-cover.jpg",
+    cover: "images/john-maus/ltyt/ltyt-cover.jpg",
     notes: ""
   },
   {
@@ -138,7 +138,7 @@ window.VIVI_RECORDS = [
     label: "Ribbon Music",
     tags: ["synthpop", "philosophical", "cold but earnest"],
     href: "albums/pitiless-censors.html",
-    cover: "images/albums/john-maus/pitiless-censors/pitiless-censors-cover.jpg",
+    cover: "images/john-maus/pitiless-censors/pitiless-censors-cover.jpg",
     notes: ""
   },
   {
@@ -150,7 +150,7 @@ window.VIVI_RECORDS = [
     label: "Upset the Rhythm",
     tags: ["lo-fi synthpop"],
     href: "albums/songs.html",
-    cover: "images/albums/john-maus/songs/songs-cover.jpg",
+    cover: "images/john-maus/songs/songs-cover.jpg",
     notes: ""
   },
   {
@@ -162,7 +162,7 @@ window.VIVI_RECORDS = [
     label: "Upset the Rhythm",
     tags: ["dark synthpop", "romantic decay"],
     href: "albums/love-is-real.html",
-    cover: "images/albums/john-maus/love-is-real/love-is-real-cover.jpg",
+    cover: "images/john-maus/love-is-real/love-is-real-cover.jpg",
     notes: ""
   },
   {
@@ -174,7 +174,7 @@ window.VIVI_RECORDS = [
     label: "Ribbon Music",
     tags: ["compilation", "deep cuts"],
     href: "albums/rarities.html",
-    cover: "images/albums/john-maus/rarities/rarities-cover.jpeg",
+    cover: "images/john-maus/rarities/rarities-cover.jpeg",
     notes: ""
   },
 
@@ -190,7 +190,7 @@ window.VIVI_RECORDS = [
     label: "Matador",
     tags: ["gloomy", "post-punk revival", "new york at night"],
     href: "albums/turn-on-the-bright-lights.html",
-    cover: "images/albums/interpol/totbl/totbl-cover.jpg",
+    cover: "images/interpol/totbl/totbl-cover.jpg",
     notes: ""
   },
   {
@@ -202,7 +202,7 @@ window.VIVI_RECORDS = [
     label: "Matador",
     tags: ["gloomy", "angular", "new york at night"],
     href: "albums/antics.html",
-    cover: "images/albums/interpol/antics/antics-cover.jpg",
+    cover: "images/interpol/antics/antics-cover.jpg",
     notes: ""
   },
   {
@@ -214,7 +214,7 @@ window.VIVI_RECORDS = [
     label: "Capitol",
     tags: ["cathedral rock", "dramatic"],
     href: "albums/olta.html",
-    cover: "images/albums/interpol/olta/olta-cover.jpg",
+    cover: "images/interpol/olta/olta-cover.jpg",
     notes: ""
   },
 
@@ -230,7 +230,7 @@ window.VIVI_RECORDS = [
     label: "DreamWorks",
     tags: ["beautifully unwell", "lush sadness"],
     href: "albums/xo.html",
-    cover: "images/albums/elliott-smith/xo/xo-cover.jpg",
+    cover: "images/elliott-smith/xo/xo-cover.jpg",
     notes: ""
   },
   {
@@ -242,7 +242,7 @@ window.VIVI_RECORDS = [
     label: "Kill Rock Stars",
     tags: ["acoustic", "quiet devastation"],
     href: "albums/elliott-smith.html",
-    cover: "images/albums/elliott-smith/self-title/self-title-cover.jpg",
+    cover: "images/elliott-smith/self-title/self-title-cover.jpg",
     notes: ""
   },
   {
@@ -254,7 +254,7 @@ window.VIVI_RECORDS = [
     label: "Kill Rock Stars",
     tags: ["outtakes", "soft sadness"],
     href: "albums/new-moon.html",
-    cover: "images/albums/elliott-smith/new-moon/new-moon-cover.jpg",
+    cover: "images/elliott-smith/new-moon/new-moon-cover.jpg",
     notes: ""
   },
   {
@@ -266,7 +266,7 @@ window.VIVI_RECORDS = [
     label: "Kill Rock Stars",
     tags: ["remaster", "archival"],
     href: "albums/es25.html",
-    cover: "images/albums/elliott-smith/self-title-25/self-title-25-cover.jpg",
+    cover: "images/elliott-smith/self-title-25/self-title-25-cover.jpg",
     notes: ""
   },
   {
@@ -278,7 +278,7 @@ window.VIVI_RECORDS = [
     label: "DreamWorks",
     tags: ["baroque pop", "emotional unraveling"],
     href: "albums/figure-8.html",
-    cover: "images/albums/elliott-smith/figure-8/figure-8-cover.jpg",
+    cover: "images/elliott-smith/figure-8/figure-8-cover.jpg",
     notes: ""
   },
   {
@@ -290,7 +290,7 @@ window.VIVI_RECORDS = [
     label: "Anti-",
     tags: ["unfinished", "raw", "open wound"],
     href: "albums/faboth.html",
-    cover: "images/albums/elliott-smith/faboth/faboth-cover.jpg",
+    cover: "images/elliott-smith/faboth/faboth-cover.jpg",
     notes: ""
   },
   {
@@ -302,7 +302,7 @@ window.VIVI_RECORDS = [
     label: "Cavity Search",
     tags: ["bedroom folk", "fragile"],
     href: "albums/roman-candle.html",
-    cover: "images/albums/elliott-smith/roman-candle/roman-candle-cover.jpeg",
+    cover: "images/elliott-smith/roman-candle/roman-candle-cover.jpeg",
     notes: ""
   },
   {
@@ -314,7 +314,7 @@ window.VIVI_RECORDS = [
     label: "Kill Rock Stars",
     tags: ["beautifully unwell", "cracked but warm"],
     href: "albums/either-or.html",
-    cover: "images/albums/elliott-smith/either-or/either-or-cover.png",
+    cover: "images/elliott-smith/either-or/either-or-cover.png",
     notes: "Early US press, gently loved."
   },
 
@@ -330,7 +330,7 @@ window.VIVI_RECORDS = [
     label: "Warp",
     tags: ["hauntology", "dusty psych pop"],
     href: "albums/haha-sound.html",
-    cover: "images/albums/broadcast/haha-sound/haha-sound-cover.jpg",
+    cover: "images/broadcast/haha-sound/haha-sound-cover.jpg",
     notes: ""
   },
   {
@@ -342,7 +342,7 @@ window.VIVI_RECORDS = [
     label: "Warp",
     tags: ["compilation", "experimental pop"],
     href: "albums/future-crayon.html",
-    cover: "images/albums/broadcast/future-crayon/future-crayon-cover.jpg",
+    cover: "images/broadcast/future-crayon/future-crayon-cover.jpg",
     notes: ""
   },
   {
@@ -354,7 +354,7 @@ window.VIVI_RECORDS = [
     label: "Warp",
     tags: ["archival", "haunted electronics"],
     href: "albums/spell-blanket.html",
-    cover: "images/albums/broadcast/spell-blanket/spell-blanket-cover.jpg",
+    cover: "images/broadcast/spell-blanket/spell-blanket-cover.jpg",
     notes: ""
   },
 
@@ -370,7 +370,7 @@ window.VIVI_RECORDS = [
     label: "Matador",
     tags: ["slacker rock", "lo-fi", "90s indie"],
     href: "albums/slanted.html",
-    cover: "images/albums/sae/sae-cover.jpg",
+    cover: "images/sae/sae-cover.jpg",
     notes: ""
   },
   {
@@ -382,7 +382,7 @@ window.VIVI_RECORDS = [
     label: "Matador",
     tags: ["indie rock", "jangly", "sunny but sad"],
     href: "albums/crooked-rain.html",
-    cover: "images/albums/crcr/crcr-cover.jpg",
+    cover: "images/crcr/crcr-cover.jpg",
     notes: ""
   },
   {
@@ -394,7 +394,7 @@ window.VIVI_RECORDS = [
     label: "Matador",
     tags: ["dry humor", "slacker rock"],
     href: "albums/brighten-corners.html",
-    cover: "images/albums/btc/btc-cover.jpg",
+    cover: "images/btc/btc-cover.jpg",
     notes: ""
   },
 
@@ -410,7 +410,7 @@ window.VIVI_RECORDS = [
     label: "Up Records",
     tags: ["desolate", "rambling", "indie rock"],
     href: "albums/long-drive.html",
-    cover: "images/albums/momo/long-drive/long-drive-cover.jpg",
+    cover: "images/momo/long-drive/long-drive-cover.jpg",
     notes: ""
   },
   {
@@ -422,7 +422,7 @@ window.VIVI_RECORDS = [
     label: "Up Records",
     tags: ["feral energy", "american decay"],
     href: "albums/lcw.html",
-    cover: "images/albums/momo/lcw/lcw-cover.jpg",
+    cover: "images/momo/lcw/lcw-cover.jpg",
     notes: ""
   },
   {
@@ -434,7 +434,7 @@ window.VIVI_RECORDS = [
     label: "Epic",
     tags: ["existential", "spacey", "aching"],
     href: "albums/moon-antarctica.html",
-    cover: "images/albums/momo/tmaa/tmaa-cover.jpg",
+    cover: "images/momo/tmaa/tmaa-cover.jpg",
     notes: ""
   },
   {
@@ -446,7 +446,7 @@ window.VIVI_RECORDS = [
     label: "Epic",
     tags: ["indie rock", "horns", "bittersweet"],
     href: "albums/good-news.html",
-    cover: "images/albums/momo/good-news/good-news-cover.jpg",
+    cover: "images/momo/good-news/good-news-cover.jpg",
     notes: ""
   },
   {
@@ -458,7 +458,7 @@ window.VIVI_RECORDS = [
     label: "Epic",
     tags: ["chaotic energy", "nautical madness"],
     href: "albums/we-were-dead.html",
-    cover: "images/albums//momo/we-were-dead/we-were-dead-cover.jpg",
+    cover: "images/momo/we-were-dead/we-were-dead-cover.jpg",
     notes: ""
   }
 ];
