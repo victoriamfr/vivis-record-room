@@ -171,21 +171,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="record-card__info">
           <div class="record-card__topline">
-            ${
-              formatDisplay
-                ? `<span class="record-card__format ${formatClass}">${formatDisplay}</span>`
-                : ""
-            }
-            ${
-              r.label
-                ? `<span class="record-card__label label-${labelSlug}">${r.label}</span>`
-                : ""
-            }
-            ${
-              r.year
-                ? `<span class="record-card__year">${r.year}</span>`
-                : ""
-            }
+            ${formatDisplay
+          ? `<span class="record-card__format ${formatClass}">${formatDisplay}</span>`
+          : ""
+        }
+            ${r.label
+          ? `<span class="record-card__label label-${labelSlug}">${r.label}</span>`
+          : ""
+        }
+            ${r.year
+          ? `<span class="record-card__year">${r.year}</span>`
+          : ""
+        }
           </div>
 
           <h3 class="record-card__title">${r.title}</h3>
@@ -195,18 +192,17 @@ document.addEventListener("DOMContentLoaded", () => {
             ${r.notes || ""}
           </p>
 
-          ${
-            r.tags && r.tags.length
-              ? `<div class="record-card__tags">
+          ${r.tags && r.tags.length
+          ? `<div class="record-card__tags">
                   ${r.tags
-                    .map(
-                      (tag) =>
-                        `<span class="tag-pill">${tag}</span>`
-                    )
-                    .join("")}
+            .map(
+              (tag) =>
+                `<span class="tag-pill">${tag}</span>`
+            )
+            .join("")}
                 </div>`
-              : ""
-          }
+          : ""
+        }
         </div>
       `;
 
@@ -254,7 +250,10 @@ document.addEventListener("DOMContentLoaded", () => {
         list.sort((a, b) => (a.label || "").localeCompare(b.label || ""));
       } else if (sort === "added") {
         list.sort((a, b) => a.addedIndex - b.addedIndex);
+      } else if (sort === "title") {
+        list.sort((a, b) => a.title.localeCompare(b.title));
       }
+
 
       return list;
     }
