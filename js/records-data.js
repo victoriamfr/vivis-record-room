@@ -189,7 +189,7 @@ window.VIVI_RECORDS = [
     year: 2002,
     label: "Matador",
     tags: ["gloomy", "post-punk revival", "new york at night"],
-    href: "albums/turn-on-the-bright-lights.html",
+    href: "albums/interpol/turn-on-the-bright-lights.html",
     cover: "images/interpol/totbl/totbl-cover.jpg",
     notes: ""
   },
